@@ -1,7 +1,7 @@
-Numero de dispositivos = 1
+Num. devices = 1
 
-Dispositivo #0
-Nombre del dispositivo: Tesla T4
+Device #0
+Device name: Tesla T4
 Major revision number: 7
 Minor revision number: 5
 Multiprocessor count: 40

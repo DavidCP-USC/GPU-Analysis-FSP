@@ -1,7 +1,7 @@
-Numero de dispositivos = 1
+Num. devices = 1
 
-Dispositivo #0
-Nombre del dispositivo: NVIDIA A100-PCIE-40GB
+Device #0
+Device name: NVIDIA A100-PCIE-40GB
 Major revision number: 8
 Minor revision number: 0
 Multiprocessor count: 108

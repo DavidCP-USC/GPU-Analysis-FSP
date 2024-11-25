@@ -3,7 +3,7 @@
 void printDevProp(cudaDeviceProp devProp) {
 
 	// Nombre del dispositivo
-	printf("Nombre del dispositivo: %s\n", devProp.name);
+	printf("Device name: %s\n", devProp.name);
 
 	// La computer capability (major.minor computer capability).
 	printf("Major revision number: %d\n", devProp.major);
@@ -81,23 +81,21 @@ int main(int argc, char *argv[]) {
 
 	if(error != cudaSuccess) {
 
-		fprintf(stderr, "Error obteniendo numero de dispositivos: %s en %s linea %d\n", cudaGetErrorString(error), __FILE__, __LINE__);
 		exit(EXIT_FAILURE);
 
 	}
 
-	printf("Numero de dispositivos = %d\n", numDevs);
+	printf("Num. devices = %d\n", numDevs);
 
 	for(int i=0; i < numDevs; i++) {
 
 		error = cudaGetDeviceProperties(&prop, i);
 		if(error != cudaSuccess) {
 
-			fprintf(stderr, "Error obteniendo propiedades del dispositivo %d: %s en %s linea %d\n", i, cudaGetErrorString(error), __FILE__, __LINE__);
 			exit(EXIT_FAILURE);
 		}
 
-		printf("\nDispositivo #%d\n", i);
+		printf("\nDevice #%d\n", i);
 		printDevProp(prop);
 
 	}

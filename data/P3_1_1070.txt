@@ -1,7 +1,7 @@
-Numero de dispositivos = 1
+Num. devices = 1
 
-Dispositivo #0
-Nombre del dispositivo: NVIDIA GeForce GTX 1070
+Device #0
+Device name: NVIDIA GeForce GTX 1070
 Major revision number: 6
 Minor revision number: 1
 Multiprocessor count: 15
