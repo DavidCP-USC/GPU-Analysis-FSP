@@ -1,0 +1,20 @@
+Numero de dispositivos = 1
+
+Dispositivo #0
+Nombre del dispositivo: NVIDIA GeForce GTX 1070
+Major revision number: 6
+Minor revision number: 1
+Multiprocessor count: 15
+Max threads per SM: 2048
+Max dimension size of a thread block (x,y,z): (2147483647, 65535, 65535)
+Max threads per block: 1024
+Max dimension size of a block (x, y, z): (1024, 1024, 64)
+Registers per block: 65536
+Registers per block: 65536
+Shared memory per multiprocessor: 98304
+Shared memory per block: 49152
+Total global memory: 8589672448
+Memory clock rate: 4004000
+Memory bus width: 256
+Peak memory bandwidth (GB/s): 256.256000
+Number of CUDA cores: 1920

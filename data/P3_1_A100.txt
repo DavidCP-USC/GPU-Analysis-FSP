@@ -1,0 +1,20 @@
+Numero de dispositivos = 1
+
+Dispositivo #0
+Nombre del dispositivo: NVIDIA A100-PCIE-40GB
+Major revision number: 8
+Minor revision number: 0
+Multiprocessor count: 108
+Max threads per SM: 2048
+Max dimension size of a thread block (x,y,z): (2147483647, 65535, 65535)
+Max threads per block: 1024
+Max dimension size of a block (x, y, z): (1024, 1024, 64)
+Registers per block: 65536
+Registers per block: 65536
+Shared memory per multiprocessor: 167936
+Shared memory per block: 49152
+Total global memory: 42298834944
+Memory clock rate: 1215000
+Memory bus width: 5120
+Peak memory bandwidth (GB/s): 1555.200000
+Number of CUDA cores: 6912
