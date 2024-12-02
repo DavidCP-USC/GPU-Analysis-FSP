@@ -6,5 +6,5 @@
 # SBATCH -t 00:10:00
 # 3480000000
 nvcc ./../code/matrizMul-simple.cu -o ./../code/matrizMul-simple
-srun --gres=gpu:a100 -c 32 --mem=64G -t 1 ./../code/matrizMul-simple ${1} ${2} ${3}
+srun --gres=gpu:a100 -c 32 --mem=64G -t 1 ./../code/matrizMul-simple ${1} ${2} ${3} ${4} ${5}
 rm ./../code/matrizMul-simple
