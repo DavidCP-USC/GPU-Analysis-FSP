@@ -1,7 +1,3 @@
-
-/**
- * Multiplica dos matrices cuadradas: C = A * B.
- */
 #include <stdio.h>
 #include <time.h>
 
@@ -16,202 +12,181 @@ inline void asserError(cudaError_t code, const char *file, int line, bool abort=
 }
 
 #define TSET(time)  clock_gettime( CLOCK_MONOTONIC, &(time) )
-#define TINT(ts,te) { ( (double) 1000.*( (te).tv_sec - (ts).tv_sec ) + ( (te).tv_nsec - (ts).tv_nsec )/(double) 1.e6 ) }
+#define TINT(ts,te) ( (double) 1000.*( (te).tv_sec - (ts).tv_sec ) + ( (te).tv_nsec - (ts).tv_nsec )/(double) 1.e6 )
 
-// Numero maximo de threads por cada dimensión del bloque
-// Consideramos threadsPerBlock.x == threadsPerBlock.y
-//
+// Número máximo de threads por cada dimensión del bloque
 #define MAX_TH_PER_BLOCK_DIM 32
 
-// Tamanho por defecto de las matrices
-#define MATDIMDEF 1000
+// Dimensiones por defecto de las matrices
+#define ROWS_DEF 1000
+#define COLS_DEF 1000
 
-// Numero de threads por cada dimensión bloque por defecto
-#define TPBDIMDEF 4
+// Número de threads por cada dimensión del bloque por defecto
+#define TPB_X_DEF 4
+#define TPB_Y_DEF 4
 
 // Tipo de datos
 typedef float basetype;
 
-void check_memoria(const unsigned int matrizDim);
+void check_memoria(size_t numElem);
 
 /**
- * Codigo host
- */
-__host__ void
-h_matrizMul(const basetype *A, const basetype *B, basetype *C, unsigned int matrizDim)
-{
-  for (unsigned int i = 0; i < matrizDim; ++i)
-    for (unsigned int j = 0; j < matrizDim; ++j) {
-      basetype sum = (basetype) 0.0;
-      for (unsigned int k = 0; k < matrizDim; ++k)
-        sum += A[i*matrizDim + k]*B[k*matrizDim + j];
-      C[i*matrizDim + j] = sum;
-  }
-}
-
-/**
- * Codigo CUDA
- * Cada thread computa un elemento de C
+ * Código CUDA
+ * Cada thread computa un elemento de la matriz C
  */
 __global__ void
-matrizMul(const basetype *A, const basetype *B, basetype *C, unsigned int matrizDim)
+matrizMul(const basetype *A, const basetype *B, basetype *C, unsigned int rowsA, unsigned int colsA, unsigned int colsB)
 {
-  // TODO: Calcula el indice de la fila de C y A
-  int i = ;
-  // TODO Calcula el indice de la columna de C y B
-  int j = ;
+    // Índices de fila y columna en la matriz C
+    int row = blockIdx.y * blockDim.y + threadIdx.y;
+    int col = blockIdx.x * blockDim.x + threadIdx.x;
 
-  if ((i < matrizDim) && (j < matrizDim))
-  {
-    basetype sum = (basetype) 0.0;
-    for(unsigned int k = 0; k < matrizDim; ++k)
+    if (row < rowsA && col < colsB)
     {
-      sum += A[i*matrizDim + k]*B[k*matrizDim + j];
+        basetype sum = 0.0;
+        for (unsigned int k = 0; k < colsA; ++k)
+        {
+            sum += A[row * colsA + k] * B[k * colsB + col];
+        }
+        C[row * colsB + col] = sum;
     }
-    C[i*matrizDim + j] = sum;
-  }
 }
 
 /**
- * Funcion main en el host
- * Parametros: nElementos threadsPerBlock
+ * Función main en el host
+ * argv[1]: número de filas de la matriz A
+ * argv[2]: número de columnas de la matriz A
+ * argv[3]: número de columnas de la matriz B
+ * argv[4]: número de threads por bloque en la dimensión x
+ * argv[5]: número de threads por bloque en la dimensión y
  */
-int
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-  basetype *h_A=NULL, *h_B=NULL, *h_C=NULL, *h_C2=NULL;
-  basetype *d_A=NULL, *d_B=NULL, *d_C=NULL;
-  unsigned int matrizDim = 1, tpbdim = 1, numElem = 1;
-  size_t size = 0;
-  // Valores para la medida de tiempos
-  struct timespec tstart, tend;
-  double tint;
+    basetype *h_A = NULL, *h_B = NULL, *h_C = NULL, *h_C2 = NULL;
+    basetype *d_A = NULL, *d_B = NULL, *d_C = NULL;
+    size_t sizeA, sizeB, sizeC;
+    unsigned int rowsA, colsA, rowsB, colsB;
+    unsigned int tpb_x, tpb_y;
+    struct timespec tstart, tend;
+    double tint;
 
-  // Tamanho de los vectores
-  matrizDim = (argc > 1) ? atoi(argv[1]):MATDIMDEF;
-  // Número de elementos de las matrices
-  numElem = matrizDim*matrizDim;
-  // Tamanho de las matrices en bytes
-  size = numElem * sizeof(basetype);
+    // Dimensiones de las matrices
+    rowsA = (argc > 1) ? atoi(argv[1]) : ROWS_DEF;
+    colsA = (argc > 2) ? atoi(argv[2]) : COLS_DEF;
+    rowsB = colsA; // Por definición, las columnas de A deben coincidir con las filas de B
+    colsB = (argc > 3) ? atoi(argv[3]) : COLS_DEF;
 
-  // Numero de threads por cada dimension  del bloque
-  tpbdim = (argc > 2) ? atoi(argv[2]):TPBDIMDEF;
-  // Comprueba si es superior al máximo
-  tpbdim = (tpbdim > MAX_TH_PER_BLOCK_DIM) ? MAX_TH_PER_BLOCK_DIM:tpbdim;
+    // Tamaños de las matrices en bytes
+    sizeA = rowsA * colsA * sizeof(basetype);
+    sizeB = rowsB * colsB * sizeof(basetype);
+    sizeC = rowsA * colsB * sizeof(basetype);
 
-  check_memoria( numElem );
+    // Dimensiones del bloque de hilos
+    tpb_x = (argc > 4) ? atoi(argv[4]) : TPB_X_DEF;
+    tpb_y = (argc > 5) ? atoi(argv[5]) : TPB_Y_DEF;
 
-  // Caracteristicas del Grid
-  // Hilos por bloque: primer parámetro dim_x, segundo dim_y
-  dim3 threadsPerBlock( tpbdim, tpbdim, 1 );
-  // TODO: Calcula el número de bloques en el Grid (bidimensional)
-  dim3 blocksPerGrid( , , 1 );
+    tpb_x = (tpb_x > MAX_TH_PER_BLOCK_DIM) ? MAX_TH_PER_BLOCK_DIM : tpb_x;
+    tpb_y = (tpb_y > MAX_TH_PER_BLOCK_DIM) ? MAX_TH_PER_BLOCK_DIM : tpb_y;
 
-  printf("Multiplicación de matrices de dimension (%u,%u), con (%u,%u) bloques de (%u,%u) threads\n",
-    matrizDim, matrizDim, blocksPerGrid.x, blocksPerGrid.y, threadsPerBlock.x, threadsPerBlock.y);
+    check_memoria(rowsA * colsA + rowsB * colsB + rowsA * colsB);
 
-  h_A = (basetype *) malloc(size);
-  h_B = (basetype *) malloc(size);
-  h_C = (basetype *) malloc(size);
-  h_C2 = (basetype *) malloc(size);
+    // Configuración de Grid y Block
+    dim3 threadsPerBlock(tpb_x, tpb_y, 1);
+    dim3 blocksPerGrid((colsB + threadsPerBlock.x - 1) / threadsPerBlock.x,
+                       (rowsA + threadsPerBlock.y - 1) / threadsPerBlock.y, 1);
 
-  // Comprueba errores
-  if (h_A == NULL || h_B == NULL || h_C == NULL)
-  {
-    fprintf(stderr, "Error reservando memoria en el host\n");
-    exit(EXIT_FAILURE);
-  }
+    printf("Multiplicación de matrices A(%u,%u) * B(%u,%u) = C(%u,%u)\n", rowsA, colsA, rowsB, colsB, rowsA, colsB);
+    printf("Grid de bloques (%u,%u), bloque de threads (%u,%u)\n",
+           blocksPerGrid.x, blocksPerGrid.y, threadsPerBlock.x, threadsPerBlock.y);
 
-  // Inicializa las matrices en el host
-  for (int i = 0; i < numElem; ++i)
-  {
-    h_A[i] = rand()/(basetype)RAND_MAX;
-    h_B[i] = rand()/(basetype)RAND_MAX;
-  }
+    // Reserva memoria en el host
+    h_A = (basetype *)malloc(sizeA);
+    h_B = (basetype *)malloc(sizeB);
+    h_C = (basetype *)malloc(sizeC);
+    h_C2 = (basetype *)malloc(sizeC);
 
-  // Inicio tiempo
-  TSET(tstart);
-  //clock_gettime( CLOCK_MONOTONIC, &tstart );
-  // Multiplica las matrices en el host
-  h_matrizMul( h_A, h_B, h_C, matrizDim );
-  // Fin tiempo
-  TSET( tend );
-  tint = TINT(tstart, tend);
-  printf( "HOST: Tiempo multiplicacion: %lf ms\n", tint );
-
-  // Inicio tiempo multiplicacion GPU
-  TSET( tstart );
-
-  // Reserva memoria para las matrices en el dispositivo
-  checkError( cudaMalloc((void **) &d_A, size) );
-  checkError( cudaMalloc((void **) &d_B, size) );
-  checkError( cudaMalloc((void **) &d_C, size) );
-
-  // Copia las matrices h_A y h_B del host al dispositivo
-  checkError( cudaMemcpy(d_A, h_A, size, cudaMemcpyHostToDevice) );
-  checkError( cudaMemcpy(d_B, h_B, size, cudaMemcpyHostToDevice) );
-
-  // TODO: Lanza el kernel CUDA
-  matrizMul<<<  >>>( d_A, d_B, d_C, matrizDim );
-
-  // Comprueba si hubo un error al el lanzamiento del kernel
-  // Notar que el lanzamiento del kernel es asíncrono por lo que
-  // este chequeo podría no detectar errores en la ejecución del mismo
-  checkError( cudaPeekAtLastError() );
-  // Sincroniza los hilos del kernel y chequea errores
-  // Este chequeo detecta posibles errores en la ejecución
-  // Notar que esta sincrinización puede degradar el rendimiento
-  checkError( cudaDeviceSynchronize() );
-
-  // Copia el vector resultado del dispositivo al host
-  checkError( cudaMemcpy(h_C2, d_C, size, cudaMemcpyDeviceToHost) );
-
-  // Fin tiempo multiplicacion GPU
-  TSET( tend );
-  // Calcula tiempo para la multiplicacion GPU
-  tint = TINT(tstart, tend);
-  printf( "DEVICE: Tiempo multiplicacion: %lf ms\n", tint );
-
-
-  // Verifica que la multiplicacion es correcta
-  for (unsigned int i = 0; i < numElem; ++i)
-  {
-    if (fabs(h_C2[i] - h_C[i]) > 1e-3)
+    if (!h_A || !h_B || !h_C || !h_C2)
     {
-      fprintf(stderr, "Verificacion de resultados falla en el elemento %d!\n", i);
-      exit(EXIT_FAILURE);
+        fprintf(stderr, "Error reservando memoria en el host\n");
+        exit(EXIT_FAILURE);
     }
-  }
 
-  printf("Multiplicacion correcta.\n");
+    // Inicializa las matrices
+    for (unsigned int i = 0; i < rowsA * colsA; ++i)
+        h_A[i] = rand() / (basetype)RAND_MAX;
+    for (unsigned int i = 0; i < rowsB * colsB; ++i)
+        h_B[i] = rand() / (basetype)RAND_MAX;
 
-  // Liberamos la memoria del dispositivo
-  checkError( cudaFree(d_A) );
-  checkError( cudaFree(d_B) );
-  checkError( cudaFree(d_C) );
+    // Host: multiplicación de matrices
+    TSET(tstart);
+    for (unsigned int i = 0; i < rowsA; ++i)
+        for (unsigned int j = 0; j < colsB; ++j)
+        {
+            basetype sum = 0.0;
+            for (unsigned int k = 0; k < colsA; ++k)
+                sum += h_A[i * colsA + k] * h_B[k * colsB + j];
+            h_C[i * colsB + j] = sum;
+        }
+    TSET(tend);
+    tint = TINT(tstart, tend);
+    printf("HOST: Tiempo multiplicación: %lf ms\n", tint);
 
-  // Liberamos la memoria del host
-  free(h_A);
-  free(h_B);
-  free(h_C);
+    // GPU: reserva memoria
+    checkError(cudaMalloc((void **)&d_A, sizeA));
+    checkError(cudaMalloc((void **)&d_B, sizeB));
+    checkError(cudaMalloc((void **)&d_C, sizeC));
 
-  printf("Terminamos\n");
-  return 0;
+    // Copia matrices al dispositivo
+    checkError(cudaMemcpy(d_A, h_A, sizeA, cudaMemcpyHostToDevice));
+    checkError(cudaMemcpy(d_B, h_B, sizeB, cudaMemcpyHostToDevice));
+
+    // Lanza el kernel
+    TSET(tstart);
+    matrizMul<<<blocksPerGrid, threadsPerBlock>>>(d_A, d_B, d_C, rowsA, colsA, colsB);
+    checkError(cudaDeviceSynchronize());
+    TSET(tend);
+    tint = TINT(tstart, tend);
+    printf("DEVICE: Tiempo multiplicación: %lf ms\n", tint);
+
+    // Copia el resultado de vuelta
+    checkError(cudaMemcpy(h_C2, d_C, sizeC, cudaMemcpyDeviceToHost));
+
+    // Verifica la multiplicación
+    for (unsigned int i = 0; i < rowsA * colsB; ++i)
+    {
+        if (fabs(h_C[i] - h_C2[i]) > 1e-3)
+        {
+            fprintf(stderr, "Error en el resultado en el índice %u\n", i);
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    printf("Multiplicación correcta.\n");
+
+    // Libera memoria
+    free(h_A);
+    free(h_B);
+    free(h_C);
+    free(h_C2);
+    cudaFree(d_A);
+    cudaFree(d_B);
+    cudaFree(d_C);
+
+    return 0;
 }
 
-void
-check_memoria(const unsigned int numElem)
+void check_memoria(size_t numElem)
 {
-  cudaDeviceProp prop;
-  checkError( cudaGetDeviceProperties(&prop, 0) );
+    cudaDeviceProp prop;
+    checkError(cudaGetDeviceProperties(&prop, 0));
 
-  size_t gmem = prop.totalGlobalMem;
-  size_t bytes_arrays = 3*numElem*sizeof(basetype);
-  double gib = (double)(1073741824.0);
+    size_t gmem = prop.totalGlobalMem;
+    double gib = 1073741824.0;
 
-  printf( "GiB ocupados en la GPU: %g GiB, memoria global %g GiB\n", bytes_arrays/gib, gmem/gib );
-  if( gmem >= bytes_arrays )
-    printf( "GiB libres en la GPU: %g GiB\n", (gmem-bytes_arrays)/gib );
-  else
-    printf( "Los arrays no caben en la memoria de la GPU\n" );
+    printf("Memoria global disponible: %g GiB\n", gmem / gib);
+    if (gmem < numElem * sizeof(basetype))
+    {
+        fprintf(stderr, "No hay suficiente memoria en la GPU\n");
+        exit(EXIT_FAILURE);
+    }
 }
