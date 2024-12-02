@@ -25,7 +25,7 @@ void printDevProp(cudaDeviceProp devProp) {
 	printf("Max dimension size of a block (x, y, z): (%d, %d, %d)\n", devProp.maxThreadsDim[0], devProp.maxThreadsDim[1], devProp.maxThreadsDim[2]);
 
 	// El numero de registros de 32 bits disponibles por SM.
-	printf("Registers per block: %d\n", devProp.regsPerMultiprocessor);
+	printf("Registers per SM: %d\n", devProp.regsPerMultiprocessor);
 
 	// El numero de registros de 32 bits disponibles por bloque
 	printf("Registers per block: %d\n", devProp.regsPerBlock);

@@ -9,7 +9,7 @@ Max threads per SM: 2048
 Max dimension size of a thread block (x,y,z): (2147483647, 65535, 65535)
 Max threads per block: 1024
 Max dimension size of a block (x, y, z): (1024, 1024, 64)
-Registers per block: 65536
+Registers per SM: 65536
 Registers per block: 65536
 Shared memory per multiprocessor: 167936
 Shared memory per block: 49152
