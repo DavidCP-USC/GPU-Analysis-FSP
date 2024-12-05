@@ -1,0 +1,534 @@
+Suma de vectores de 2600000000 elementos (1 reps), con 10156250 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2600000000: 9900.670177 ms
+A: Tiempo reserva memoria GPU: 555.953661 ms
+B: Tiempo envio vectores GPU: 1955.851417 ms
+C: Tiempo ejecucion kernel GPU: 22.802583 ms
+D: Tiempo envio resultado GPU: 4602.516498 ms
+Suma de vectores de 2610000000 elementos (1 reps), con 10195313 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2610000000: 9984.178801 ms
+A: Tiempo reserva memoria GPU: 225.950727 ms
+B: Tiempo envio vectores GPU: 1771.364104 ms
+C: Tiempo ejecucion kernel GPU: 22.862172 ms
+D: Tiempo envio resultado GPU: 2385.768393 ms
+Suma de vectores de 2620000000 elementos (1 reps), con 10234375 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2620000000: 9986.721696 ms
+A: Tiempo reserva memoria GPU: 357.831246 ms
+B: Tiempo envio vectores GPU: 2000.949035 ms
+C: Tiempo ejecucion kernel GPU: 22.958218 ms
+D: Tiempo envio resultado GPU: 4736.384618 ms
+Suma de vectores de 2630000000 elementos (1 reps), con 10273438 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2630000000: 10028.490902 ms
+A: Tiempo reserva memoria GPU: 626.138355 ms
+B: Tiempo envio vectores GPU: 1938.029307 ms
+C: Tiempo ejecucion kernel GPU: 23.038903 ms
+D: Tiempo envio resultado GPU: 4760.630083 ms
+Suma de vectores de 2640000000 elementos (1 reps), con 10312500 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2640000000: 10043.427156 ms
+A: Tiempo reserva memoria GPU: 240.825670 ms
+B: Tiempo envio vectores GPU: 1985.459635 ms
+C: Tiempo ejecucion kernel GPU: 23.129251 ms
+D: Tiempo envio resultado GPU: 4767.676964 ms
+Suma de vectores de 2650000000 elementos (1 reps), con 10351563 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2650000000: 10085.314066 ms
+A: Tiempo reserva memoria GPU: 298.095500 ms
+B: Tiempo envio vectores GPU: 1920.804705 ms
+C: Tiempo ejecucion kernel GPU: 23.221873 ms
+D: Tiempo envio resultado GPU: 4838.441163 ms
+Suma de vectores de 2660000000 elementos (1 reps), con 10390625 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2660000000: 10196.049983 ms
+A: Tiempo reserva memoria GPU: 553.660805 ms
+B: Tiempo envio vectores GPU: 1898.715292 ms
+C: Tiempo ejecucion kernel GPU: 23.310927 ms
+D: Tiempo envio resultado GPU: 2497.431761 ms
+Suma de vectores de 2670000000 elementos (1 reps), con 10429688 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2670000000: 10148.393522 ms
+A: Tiempo reserva memoria GPU: 449.799696 ms
+B: Tiempo envio vectores GPU: 1941.213837 ms
+C: Tiempo ejecucion kernel GPU: 23.402759 ms
+D: Tiempo envio resultado GPU: 4929.525141 ms
+Suma de vectores de 2680000000 elementos (1 reps), con 10468750 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2680000000: 10190.446219 ms
+A: Tiempo reserva memoria GPU: 235.851811 ms
+B: Tiempo envio vectores GPU: 1940.539958 ms
+C: Tiempo ejecucion kernel GPU: 23.471629 ms
+D: Tiempo envio resultado GPU: 4992.019068 ms
+Suma de vectores de 2690000000 elementos (1 reps), con 10507813 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2690000000: 10237.191182 ms
+A: Tiempo reserva memoria GPU: 577.788984 ms
+B: Tiempo envio vectores GPU: 2024.507966 ms
+C: Tiempo ejecucion kernel GPU: 23.552884 ms
+D: Tiempo envio resultado GPU: 5018.010451 ms
+Suma de vectores de 2700000000 elementos (1 reps), con 10546875 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2700000000: 10328.916491 ms
+A: Tiempo reserva memoria GPU: 215.466036 ms
+B: Tiempo envio vectores GPU: 1827.689757 ms
+C: Tiempo ejecucion kernel GPU: 23.691089 ms
+D: Tiempo envio resultado GPU: 2466.349452 ms
+Suma de vectores de 2710000000 elementos (1 reps), con 10585938 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2710000000: 10296.082299 ms
+A: Tiempo reserva memoria GPU: 500.538552 ms
+B: Tiempo envio vectores GPU: 1946.539757 ms
+C: Tiempo ejecucion kernel GPU: 23.742526 ms
+D: Tiempo envio resultado GPU: 5104.494962 ms
+Suma de vectores de 2720000000 elementos (1 reps), con 10625000 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2720000000: 10357.153548 ms
+A: Tiempo reserva memoria GPU: 250.425485 ms
+B: Tiempo envio vectores GPU: 2044.599608 ms
+C: Tiempo ejecucion kernel GPU: 23.837061 ms
+D: Tiempo envio resultado GPU: 5187.577641 ms
+Suma de vectores de 2730000000 elementos (1 reps), con 10664063 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2730000000: 10504.124376 ms
+A: Tiempo reserva memoria GPU: 389.269551 ms
+B: Tiempo envio vectores GPU: 2051.211407 ms
+C: Tiempo ejecucion kernel GPU: 23.922254 ms
+D: Tiempo envio resultado GPU: 5235.701008 ms
+Suma de vectores de 2740000000 elementos (1 reps), con 10703125 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2740000000: 10453.132704 ms
+A: Tiempo reserva memoria GPU: 318.814649 ms
+B: Tiempo envio vectores GPU: 2059.123190 ms
+C: Tiempo ejecucion kernel GPU: 24.019326 ms
+D: Tiempo envio resultado GPU: 5295.831571 ms
+Suma de vectores de 2750000000 elementos (1 reps), con 10742188 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2750000000: 10477.381603 ms
+A: Tiempo reserva memoria GPU: 689.727341 ms
+B: Tiempo envio vectores GPU: 2083.860908 ms
+C: Tiempo ejecucion kernel GPU: 24.094197 ms
+D: Tiempo envio resultado GPU: 5381.786503 ms
+Suma de vectores de 2760000000 elementos (1 reps), con 10781250 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2760000000: 10528.424061 ms
+A: Tiempo reserva memoria GPU: 445.511451 ms
+B: Tiempo envio vectores GPU: 2105.493479 ms
+C: Tiempo ejecucion kernel GPU: 24.188239 ms
+D: Tiempo envio resultado GPU: 5451.870456 ms
+Suma de vectores de 2770000000 elementos (1 reps), con 10820313 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2770000000: 10510.306290 ms
+A: Tiempo reserva memoria GPU: 222.779017 ms
+B: Tiempo envio vectores GPU: 1967.775496 ms
+C: Tiempo ejecucion kernel GPU: 24.250809 ms
+D: Tiempo envio resultado GPU: 3951.034684 ms
+Suma de vectores de 2780000000 elementos (1 reps), con 10859375 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2780000000: 10595.386059 ms
+A: Tiempo reserva memoria GPU: 222.566488 ms
+B: Tiempo envio vectores GPU: 2108.355858 ms
+C: Tiempo ejecucion kernel GPU: 24.352421 ms
+D: Tiempo envio resultado GPU: 5541.252294 ms
+Suma de vectores de 2790000000 elementos (1 reps), con 10898438 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2790000000: 10629.289842 ms
+A: Tiempo reserva memoria GPU: 391.161422 ms
+B: Tiempo envio vectores GPU: 1973.547399 ms
+C: Tiempo ejecucion kernel GPU: 24.459366 ms
+D: Tiempo envio resultado GPU: 2567.712762 ms
+Suma de vectores de 2800000000 elementos (1 reps), con 10937500 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2800000000: 10691.321986 ms
+A: Tiempo reserva memoria GPU: 670.004895 ms
+B: Tiempo envio vectores GPU: 2095.931283 ms
+C: Tiempo ejecucion kernel GPU: 24.526917 ms
+D: Tiempo envio resultado GPU: 5505.591682 ms
+Suma de vectores de 2810000000 elementos (1 reps), con 10976563 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2810000000: 10754.875967 ms
+A: Tiempo reserva memoria GPU: 523.338961 ms
+B: Tiempo envio vectores GPU: 2103.074610 ms
+C: Tiempo ejecucion kernel GPU: 24.606475 ms
+D: Tiempo envio resultado GPU: 5534.134832 ms
+Suma de vectores de 2820000000 elementos (1 reps), con 11015625 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2820000000: 10718.402847 ms
+A: Tiempo reserva memoria GPU: 287.759341 ms
+B: Tiempo envio vectores GPU: 2022.244880 ms
+C: Tiempo ejecucion kernel GPU: 24.699402 ms
+D: Tiempo envio resultado GPU: 4218.074086 ms
+Suma de vectores de 2830000000 elementos (1 reps), con 11054688 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2830000000: 10886.813467 ms
+A: Tiempo reserva memoria GPU: 434.335697 ms
+B: Tiempo envio vectores GPU: 2110.995578 ms
+C: Tiempo ejecucion kernel GPU: 24.793533 ms
+D: Tiempo envio resultado GPU: 5563.790482 ms
+Suma de vectores de 2840000000 elementos (1 reps), con 11093750 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2840000000: 10942.451104 ms
+A: Tiempo reserva memoria GPU: 532.422004 ms
+B: Tiempo envio vectores GPU: 2125.244132 ms
+C: Tiempo ejecucion kernel GPU: 24.880440 ms
+D: Tiempo envio resultado GPU: 5583.096621 ms
+Suma de vectores de 2850000000 elementos (1 reps), con 11132813 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2850000000: 11003.011059 ms
+A: Tiempo reserva memoria GPU: 447.836741 ms
+B: Tiempo envio vectores GPU: 2131.545482 ms
+C: Tiempo ejecucion kernel GPU: 24.964464 ms
+D: Tiempo envio resultado GPU: 5597.888398 ms
+Suma de vectores de 2860000000 elementos (1 reps), con 11171875 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2860000000: 11102.631020 ms
+A: Tiempo reserva memoria GPU: 440.569568 ms
+B: Tiempo envio vectores GPU: 2107.333727 ms
+C: Tiempo ejecucion kernel GPU: 25.053499 ms
+D: Tiempo envio resultado GPU: 5723.147656 ms
+Suma de vectores de 2870000000 elementos (1 reps), con 11210938 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2870000000: 10986.810580 ms
+A: Tiempo reserva memoria GPU: 441.846205 ms
+B: Tiempo envio vectores GPU: 1925.161061 ms
+C: Tiempo ejecucion kernel GPU: 25.143753 ms
+D: Tiempo envio resultado GPU: 2644.183499 ms
+Suma de vectores de 2880000000 elementos (1 reps), con 11250000 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2880000000: 11181.406421 ms
+A: Tiempo reserva memoria GPU: 228.731355 ms
+B: Tiempo envio vectores GPU: 2068.334526 ms
+C: Tiempo ejecucion kernel GPU: 25.227753 ms
+D: Tiempo envio resultado GPU: 5619.437942 ms
+Suma de vectores de 2890000000 elementos (1 reps), con 11289063 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2890000000: 11257.798013 ms
+A: Tiempo reserva memoria GPU: 241.744283 ms
+B: Tiempo envio vectores GPU: 2100.698670 ms
+C: Tiempo ejecucion kernel GPU: 25.326665 ms
+D: Tiempo envio resultado GPU: 5749.026822 ms
+Suma de vectores de 2900000000 elementos (1 reps), con 11328125 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2900000000: 11120.865221 ms
+A: Tiempo reserva memoria GPU: 228.031590 ms
+B: Tiempo envio vectores GPU: 2061.650025 ms
+C: Tiempo ejecucion kernel GPU: 25.398614 ms
+D: Tiempo envio resultado GPU: 4585.717966 ms
+Suma de vectores de 2910000000 elementos (1 reps), con 11367188 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2910000000: 11363.601997 ms
+A: Tiempo reserva memoria GPU: 386.690295 ms
+B: Tiempo envio vectores GPU: 2089.706817 ms
+C: Tiempo ejecucion kernel GPU: 25.484714 ms
+D: Tiempo envio resultado GPU: 5703.444974 ms
+Suma de vectores de 2920000000 elementos (1 reps), con 11406250 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2920000000: 11461.952713 ms
+A: Tiempo reserva memoria GPU: 233.370133 ms
+B: Tiempo envio vectores GPU: 2123.040303 ms
+C: Tiempo ejecucion kernel GPU: 25.586063 ms
+D: Tiempo envio resultado GPU: 5760.984579 ms
+Suma de vectores de 2930000000 elementos (1 reps), con 11445313 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2930000000: 11176.302465 ms
+A: Tiempo reserva memoria GPU: 217.220310 ms
+B: Tiempo envio vectores GPU: 2043.874266 ms
+C: Tiempo ejecucion kernel GPU: 25.669891 ms
+D: Tiempo envio resultado GPU: 2701.001976 ms
+Suma de vectores de 2940000000 elementos (1 reps), con 11484375 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2940000000: 11189.746463 ms
+A: Tiempo reserva memoria GPU: 235.846844 ms
+B: Tiempo envio vectores GPU: 2096.629933 ms
+C: Tiempo ejecucion kernel GPU: 25.765893 ms
+D: Tiempo envio resultado GPU: 3969.036665 ms
+Suma de vectores de 2950000000 elementos (1 reps), con 11523438 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2950000000: 11632.424301 ms
+A: Tiempo reserva memoria GPU: 293.161877 ms
+B: Tiempo envio vectores GPU: 2145.130611 ms
+C: Tiempo ejecucion kernel GPU: 25.842998 ms
+D: Tiempo envio resultado GPU: 3003.945166 ms
+Suma de vectores de 2960000000 elementos (1 reps), con 11562500 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2960000000: 11690.182018 ms
+A: Tiempo reserva memoria GPU: 368.500015 ms
+B: Tiempo envio vectores GPU: 2159.628413 ms
+C: Tiempo ejecucion kernel GPU: 25.923010 ms
+D: Tiempo envio resultado GPU: 5875.545111 ms
+Suma de vectores de 2970000000 elementos (1 reps), con 11601563 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2970000000: 11370.811363 ms
+A: Tiempo reserva memoria GPU: 225.466786 ms
+B: Tiempo envio vectores GPU: 2041.196983 ms
+C: Tiempo ejecucion kernel GPU: 26.038511 ms
+D: Tiempo envio resultado GPU: 2731.044542 ms
+Suma de vectores de 2980000000 elementos (1 reps), con 11640625 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2980000000: 11812.462307 ms
+A: Tiempo reserva memoria GPU: 446.858817 ms
+B: Tiempo envio vectores GPU: 2166.344975 ms
+C: Tiempo ejecucion kernel GPU: 26.099237 ms
+D: Tiempo envio resultado GPU: 5907.548357 ms
+Suma de vectores de 2990000000 elementos (1 reps), con 11679688 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 2990000000: 11858.139930 ms
+A: Tiempo reserva memoria GPU: 268.572469 ms
+B: Tiempo envio vectores GPU: 2145.448849 ms
+C: Tiempo ejecucion kernel GPU: 26.198592 ms
+D: Tiempo envio resultado GPU: 5903.796704 ms
+Suma de vectores de 3000000000 elementos (1 reps), con 11718750 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3000000000: 11398.125768 ms
+A: Tiempo reserva memoria GPU: 678.783779 ms
+B: Tiempo envio vectores GPU: 1997.766541 ms
+C: Tiempo ejecucion kernel GPU: 26.292002 ms
+D: Tiempo envio resultado GPU: 2744.936713 ms
+Suma de vectores de 3010000000 elementos (1 reps), con 11757813 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3010000000: 11983.217389 ms
+A: Tiempo reserva memoria GPU: 261.434944 ms
+B: Tiempo envio vectores GPU: 2250.352482 ms
+C: Tiempo ejecucion kernel GPU: 26.362575 ms
+D: Tiempo envio resultado GPU: 5898.165229 ms
+Suma de vectores de 3020000000 elementos (1 reps), con 11796875 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3020000000: 12094.733504 ms
+A: Tiempo reserva memoria GPU: 422.992702 ms
+B: Tiempo envio vectores GPU: 2305.783469 ms
+C: Tiempo ejecucion kernel GPU: 26.441692 ms
+D: Tiempo envio resultado GPU: 6048.713807 ms
+Suma de vectores de 3030000000 elementos (1 reps), con 11835938 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3030000000: 12122.597348 ms
+A: Tiempo reserva memoria GPU: 672.915838 ms
+B: Tiempo envio vectores GPU: 2196.345678 ms
+C: Tiempo ejecucion kernel GPU: 26.568769 ms
+D: Tiempo envio resultado GPU: 2808.835767 ms
+Suma de vectores de 3040000000 elementos (1 reps), con 11875000 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3040000000: 12178.863665 ms
+A: Tiempo reserva memoria GPU: 229.721919 ms
+B: Tiempo envio vectores GPU: 2202.895411 ms
+C: Tiempo ejecucion kernel GPU: 26.620058 ms
+D: Tiempo envio resultado GPU: 6038.087451 ms
+Suma de vectores de 3050000000 elementos (1 reps), con 11914063 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3050000000: 12267.152286 ms
+A: Tiempo reserva memoria GPU: 459.850467 ms
+B: Tiempo envio vectores GPU: 2250.227279 ms
+C: Tiempo ejecucion kernel GPU: 26.708403 ms
+D: Tiempo envio resultado GPU: 6101.697813 ms
+Suma de vectores de 3060000000 elementos (1 reps), con 11953125 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3060000000: 12319.473682 ms
+A: Tiempo reserva memoria GPU: 246.162023 ms
+B: Tiempo envio vectores GPU: 2229.134701 ms
+C: Tiempo ejecucion kernel GPU: 26.817262 ms
+D: Tiempo envio resultado GPU: 6087.152915 ms
+Suma de vectores de 3070000000 elementos (1 reps), con 11992188 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3070000000: 12355.393547 ms
+A: Tiempo reserva memoria GPU: 452.957439 ms
+B: Tiempo envio vectores GPU: 2292.130599 ms
+C: Tiempo ejecucion kernel GPU: 26.877465 ms
+D: Tiempo envio resultado GPU: 6038.898849 ms
+Suma de vectores de 3080000000 elementos (1 reps), con 12031250 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3080000000: 12415.340929 ms
+A: Tiempo reserva memoria GPU: 248.944434 ms
+B: Tiempo envio vectores GPU: 2334.186379 ms
+C: Tiempo ejecucion kernel GPU: 26.986733 ms
+D: Tiempo envio resultado GPU: 6171.121287 ms
+Suma de vectores de 3090000000 elementos (1 reps), con 12070313 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3090000000: 12478.086434 ms
+A: Tiempo reserva memoria GPU: 451.610720 ms
+B: Tiempo envio vectores GPU: 2218.795039 ms
+C: Tiempo ejecucion kernel GPU: 27.053425 ms
+D: Tiempo envio resultado GPU: 6099.406218 ms
+Suma de vectores de 3100000000 elementos (1 reps), con 12109375 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3100000000: 12668.803483 ms
+A: Tiempo reserva memoria GPU: 239.776689 ms
+B: Tiempo envio vectores GPU: 2330.564432 ms
+C: Tiempo ejecucion kernel GPU: 27.163019 ms
+D: Tiempo envio resultado GPU: 6127.358858 ms
+Suma de vectores de 3110000000 elementos (1 reps), con 12148438 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3110000000: 12606.492519 ms
+A: Tiempo reserva memoria GPU: 220.082227 ms
+B: Tiempo envio vectores GPU: 2288.589688 ms
+C: Tiempo ejecucion kernel GPU: 27.246547 ms
+D: Tiempo envio resultado GPU: 6211.688730 ms
+Suma de vectores de 3120000000 elementos (1 reps), con 12187500 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3120000000: 12678.912192 ms
+A: Tiempo reserva memoria GPU: 661.409435 ms
+B: Tiempo envio vectores GPU: 2347.020505 ms
+C: Tiempo ejecucion kernel GPU: 27.318300 ms
+D: Tiempo envio resultado GPU: 6173.990494 ms
+Suma de vectores de 3130000000 elementos (1 reps), con 12226563 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3130000000: 12765.001755 ms
+A: Tiempo reserva memoria GPU: 453.538000 ms
+B: Tiempo envio vectores GPU: 2304.137966 ms
+C: Tiempo ejecucion kernel GPU: 27.416539 ms
+D: Tiempo envio resultado GPU: 6259.191099 ms
+Suma de vectores de 3140000000 elementos (1 reps), con 12265625 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3140000000: 12840.001100 ms
+A: Tiempo reserva memoria GPU: 232.048268 ms
+B: Tiempo envio vectores GPU: 2300.216397 ms
+C: Tiempo ejecucion kernel GPU: 27.520966 ms
+D: Tiempo envio resultado GPU: 6266.583837 ms
+Suma de vectores de 3150000000 elementos (1 reps), con 12304688 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3150000000: 12897.615324 ms
+A: Tiempo reserva memoria GPU: 580.583443 ms
+B: Tiempo envio vectores GPU: 2403.400490 ms
+C: Tiempo ejecucion kernel GPU: 27.594761 ms
+D: Tiempo envio resultado GPU: 6311.209746 ms
+Suma de vectores de 3160000000 elementos (1 reps), con 12343750 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3160000000: 12920.190937 ms
+A: Tiempo reserva memoria GPU: 434.956503 ms
+B: Tiempo envio vectores GPU: 2376.689076 ms
+C: Tiempo ejecucion kernel GPU: 27.672608 ms
+D: Tiempo envio resultado GPU: 6240.789866 ms
+Suma de vectores de 3170000000 elementos (1 reps), con 12382813 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3170000000: 13011.473378 ms
+A: Tiempo reserva memoria GPU: 232.108121 ms
+B: Tiempo envio vectores GPU: 2347.409279 ms
+C: Tiempo ejecucion kernel GPU: 27.775560 ms
+D: Tiempo envio resultado GPU: 6341.110275 ms
+Suma de vectores de 3180000000 elementos (1 reps), con 12421875 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3180000000: 13032.444945 ms
+A: Tiempo reserva memoria GPU: 219.661353 ms
+B: Tiempo envio vectores GPU: 2420.153136 ms
+C: Tiempo ejecucion kernel GPU: 27.854672 ms
+D: Tiempo envio resultado GPU: 3201.715935 ms
+Suma de vectores de 3190000000 elementos (1 reps), con 12460938 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3190000000: 13156.678484 ms
+A: Tiempo reserva memoria GPU: 443.961602 ms
+B: Tiempo envio vectores GPU: 2398.885321 ms
+C: Tiempo ejecucion kernel GPU: 27.975532 ms
+D: Tiempo envio resultado GPU: 6304.794054 ms
+Suma de vectores de 3200000000 elementos (1 reps), con 12500000 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3200000000: 13170.598547 ms
+A: Tiempo reserva memoria GPU: 666.078271 ms
+B: Tiempo envio vectores GPU: 2319.244503 ms
+C: Tiempo ejecucion kernel GPU: 28.014229 ms
+D: Tiempo envio resultado GPU: 6347.536277 ms
+Suma de vectores de 3210000000 elementos (1 reps), con 12539063 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3210000000: 13261.518107 ms
+A: Tiempo reserva memoria GPU: 429.381254 ms
+B: Tiempo envio vectores GPU: 2450.003824 ms
+C: Tiempo ejecucion kernel GPU: 28.123258 ms
+D: Tiempo envio resultado GPU: 6424.558718 ms
+Suma de vectores de 3220000000 elementos (1 reps), con 12578125 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3220000000: 12318.439655 ms
+A: Tiempo reserva memoria GPU: 304.343944 ms
+B: Tiempo envio vectores GPU: 2200.218554 ms
+C: Tiempo ejecucion kernel GPU: 28.210265 ms
+D: Tiempo envio resultado GPU: 2961.822969 ms
+Suma de vectores de 3230000000 elementos (1 reps), con 12617188 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3230000000: 13349.705045 ms
+A: Tiempo reserva memoria GPU: 251.349443 ms
+B: Tiempo envio vectores GPU: 2316.964428 ms
+C: Tiempo ejecucion kernel GPU: 28.289457 ms
+D: Tiempo envio resultado GPU: 6372.505830 ms
+Suma de vectores de 3240000000 elementos (1 reps), con 12656250 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3240000000: 13456.217379 ms
+A: Tiempo reserva memoria GPU: 252.256935 ms
+B: Tiempo envio vectores GPU: 2370.905188 ms
+C: Tiempo ejecucion kernel GPU: 28.396371 ms
+D: Tiempo envio resultado GPU: 6468.470495 ms
+Suma de vectores de 3250000000 elementos (1 reps), con 12695313 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3250000000: 13463.009843 ms
+A: Tiempo reserva memoria GPU: 604.319955 ms
+B: Tiempo envio vectores GPU: 2426.186137 ms
+C: Tiempo ejecucion kernel GPU: 28.462943 ms
+D: Tiempo envio resultado GPU: 6378.272037 ms
+Suma de vectores de 3260000000 elementos (1 reps), con 12734375 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3260000000: 13482.368185 ms
+A: Tiempo reserva memoria GPU: 447.865752 ms
+B: Tiempo envio vectores GPU: 2398.926034 ms
+C: Tiempo ejecucion kernel GPU: 28.558959 ms
+D: Tiempo envio resultado GPU: 6521.592488 ms
+Suma de vectores de 3270000000 elementos (1 reps), con 12773438 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3270000000: 12608.473699 ms
+A: Tiempo reserva memoria GPU: 645.728877 ms
+B: Tiempo envio vectores GPU: 2323.097823 ms
+C: Tiempo ejecucion kernel GPU: 28.645354 ms
+D: Tiempo envio resultado GPU: 6384.257640 ms
+Suma de vectores de 3280000000 elementos (1 reps), con 12812500 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3280000000: 12503.387214 ms
+A: Tiempo reserva memoria GPU: 259.036364 ms
+B: Tiempo envio vectores GPU: 2307.705550 ms
+C: Tiempo ejecucion kernel GPU: 28.732260 ms
+D: Tiempo envio resultado GPU: 4430.689595 ms
+Suma de vectores de 3290000000 elementos (1 reps), con 12851563 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3290000000: 12656.126250 ms
+A: Tiempo reserva memoria GPU: 445.424494 ms
+B: Tiempo envio vectores GPU: 2442.037327 ms
+C: Tiempo ejecucion kernel GPU: 28.803602 ms
+D: Tiempo envio resultado GPU: 6465.672424 ms
+Suma de vectores de 3300000000 elementos (1 reps), con 12890625 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3300000000: 13762.809924 ms
+A: Tiempo reserva memoria GPU: 661.145281 ms
+B: Tiempo envio vectores GPU: 2370.430638 ms
+C: Tiempo ejecucion kernel GPU: 28.926751 ms
+D: Tiempo envio resultado GPU: 6497.530593 ms
+Suma de vectores de 3310000000 elementos (1 reps), con 12929688 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3310000000: 13830.463590 ms
+A: Tiempo reserva memoria GPU: 222.037667 ms
+B: Tiempo envio vectores GPU: 2399.554707 ms
+C: Tiempo ejecucion kernel GPU: 28.989240 ms
+D: Tiempo envio resultado GPU: 6622.320213 ms
+Suma de vectores de 3320000000 elementos (1 reps), con 12968750 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3320000000: 12802.150068 ms
+A: Tiempo reserva memoria GPU: 438.137117 ms
+B: Tiempo envio vectores GPU: 2475.028021 ms
+C: Tiempo ejecucion kernel GPU: 29.092295 ms
+D: Tiempo envio resultado GPU: 6541.494339 ms
+Suma de vectores de 3330000000 elementos (1 reps), con 13007813 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3330000000: 13946.763226 ms
+A: Tiempo reserva memoria GPU: 457.183676 ms
+B: Tiempo envio vectores GPU: 2410.371937 ms
+C: Tiempo ejecucion kernel GPU: 29.167986 ms
+D: Tiempo envio resultado GPU: 6709.418231 ms
+Suma de vectores de 3340000000 elementos (1 reps), con 13046875 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3340000000: 14042.454207 ms
+A: Tiempo reserva memoria GPU: 389.617112 ms
+B: Tiempo envio vectores GPU: 2446.189692 ms
+C: Tiempo ejecucion kernel GPU: 29.238809 ms
+D: Tiempo envio resultado GPU: 6743.446944 ms
+Suma de vectores de 3350000000 elementos (1 reps), con 13085938 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3350000000: 14081.514435 ms
+A: Tiempo reserva memoria GPU: 378.255432 ms
+B: Tiempo envio vectores GPU: 2434.954262 ms
+C: Tiempo ejecucion kernel GPU: 29.345178 ms
+D: Tiempo envio resultado GPU: 6725.965279 ms
+Suma de vectores de 3360000000 elementos (1 reps), con 13125000 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3360000000: 14137.364311 ms
+A: Tiempo reserva memoria GPU: 461.976589 ms
+B: Tiempo envio vectores GPU: 2413.491516 ms
+C: Tiempo ejecucion kernel GPU: 29.424933 ms
+D: Tiempo envio resultado GPU: 4009.299131 ms
+Suma de vectores de 3370000000 elementos (1 reps), con 13164063 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3370000000: 14247.725393 ms
+A: Tiempo reserva memoria GPU: 702.995725 ms
+B: Tiempo envio vectores GPU: 2569.856509 ms
+C: Tiempo ejecucion kernel GPU: 29.510960 ms
+D: Tiempo envio resultado GPU: 6987.069101 ms
+Suma de vectores de 3380000000 elementos (1 reps), con 13203125 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3380000000: 14275.956199 ms
+A: Tiempo reserva memoria GPU: 367.306793 ms
+B: Tiempo envio vectores GPU: 2457.231908 ms
+C: Tiempo ejecucion kernel GPU: 29.607470 ms
+D: Tiempo envio resultado GPU: 6849.575464 ms
+Suma de vectores de 3390000000 elementos (1 reps), con 13242188 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3390000000: 14324.388515 ms
+A: Tiempo reserva memoria GPU: 240.447268 ms
+B: Tiempo envio vectores GPU: 2434.066004 ms
+C: Tiempo ejecucion kernel GPU: 29.682629 ms
+D: Tiempo envio resultado GPU: 6846.098274 ms
+Suma de vectores de 3400000000 elementos (1 reps), con 13281250 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3400000000: 14473.662188 ms
+A: Tiempo reserva memoria GPU: 558.612558 ms
+B: Tiempo envio vectores GPU: 2596.729962 ms
+C: Tiempo ejecucion kernel GPU: 29.792343 ms
+D: Tiempo envio resultado GPU: 7042.504846 ms
+Suma de vectores de 3410000000 elementos (1 reps), con 13320313 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3410000000: 14454.990988 ms
+A: Tiempo reserva memoria GPU: 282.636406 ms
+B: Tiempo envio vectores GPU: 2566.395447 ms
+C: Tiempo ejecucion kernel GPU: 29.889556 ms
+D: Tiempo envio resultado GPU: 6929.117564 ms
+Suma de vectores de 3420000000 elementos (1 reps), con 13359375 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3420000000: 13412.965536 ms
+A: Tiempo reserva memoria GPU: 446.064368 ms
+B: Tiempo envio vectores GPU: 2463.267883 ms
+C: Tiempo ejecucion kernel GPU: 29.931658 ms
+D: Tiempo envio resultado GPU: 6722.940951 ms
+Suma de vectores de 3430000000 elementos (1 reps), con 13398438 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3430000000: 13153.675836 ms
+A: Tiempo reserva memoria GPU: 239.312630 ms
+B: Tiempo envio vectores GPU: 2218.529180 ms
+C: Tiempo ejecucion kernel GPU: 30.045507 ms
+D: Tiempo envio resultado GPU: 6670.331597 ms
+Suma de vectores de 3440000000 elementos (1 reps), con 13437500 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3440000000: 14756.543334 ms
+A: Tiempo reserva memoria GPU: 367.336876 ms
+B: Tiempo envio vectores GPU: 2515.448576 ms
+C: Tiempo ejecucion kernel GPU: 30.126687 ms
+D: Tiempo envio resultado GPU: 7386.397636 ms
+Suma de vectores de 3450000000 elementos (1 reps), con 13476563 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3450000000: 13211.152427 ms
+A: Tiempo reserva memoria GPU: 393.154557 ms
+B: Tiempo envio vectores GPU: 2319.341463 ms
+C: Tiempo ejecucion kernel GPU: 30.202123 ms
+D: Tiempo envio resultado GPU: 3144.503000 ms
+Suma de vectores de 3460000000 elementos (1 reps), con 13515625 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3460000000: 14751.535570 ms
+A: Tiempo reserva memoria GPU: 385.405135 ms
+B: Tiempo envio vectores GPU: 2520.770224 ms
+C: Tiempo ejecucion kernel GPU: 30.327654 ms
+D: Tiempo envio resultado GPU: 7206.895618 ms
+Suma de vectores de 3470000000 elementos (1 reps), con 13554688 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3470000000: 13845.114288 ms
+A: Tiempo reserva memoria GPU: 303.114171 ms
+B: Tiempo envio vectores GPU: 2572.928280 ms
+C: Tiempo ejecucion kernel GPU: 30.394277 ms
+D: Tiempo envio resultado GPU: 6793.543478 ms
+Suma de vectores de 3480000000 elementos (1 reps), con 13593750 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14838.277846 ms
+A: Tiempo reserva memoria GPU: 257.880172 ms
+B: Tiempo envio vectores GPU: 2595.574059 ms
+C: Tiempo ejecucion kernel GPU: 30.471560 ms
+D: Tiempo envio resultado GPU: 7129.855907 ms

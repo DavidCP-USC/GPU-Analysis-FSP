@@ -1,0 +1,156 @@
+Suma de vectores de 3100000000 elementos (1 reps), con 12109375 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 409.580135 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3100000000: 13199.022768 ms
+C: Tiempo ejecucion kernel GPU: 4039.817477 ms
+Suma de vectores de 3110000000 elementos (1 reps), con 12148438 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 602.879749 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3110000000: 13212.369033 ms
+C: Tiempo ejecucion kernel GPU: 4088.902533 ms
+Suma de vectores de 3120000000 elementos (1 reps), con 12187500 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 1064.670403 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3120000000: 13290.418112 ms
+C: Tiempo ejecucion kernel GPU: 4101.620974 ms
+Suma de vectores de 3130000000 elementos (1 reps), con 12226563 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 173.528238 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3130000000: 13317.201458 ms
+C: Tiempo ejecucion kernel GPU: 4102.699017 ms
+Suma de vectores de 3140000000 elementos (1 reps), con 12265625 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 616.720864 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3140000000: 13405.443711 ms
+C: Tiempo ejecucion kernel GPU: 4143.089021 ms
+Suma de vectores de 3150000000 elementos (1 reps), con 12304688 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 171.208705 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3150000000: 13410.511698 ms
+C: Tiempo ejecucion kernel GPU: 4143.091728 ms
+Suma de vectores de 3160000000 elementos (1 reps), con 12343750 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 164.633135 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3160000000: 13457.416083 ms
+C: Tiempo ejecucion kernel GPU: 4166.364876 ms
+Suma de vectores de 3170000000 elementos (1 reps), con 12382813 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 383.834874 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3170000000: 13497.674700 ms
+C: Tiempo ejecucion kernel GPU: 4181.180715 ms
+Suma de vectores de 3180000000 elementos (1 reps), con 12421875 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 168.996692 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3180000000: 13514.857762 ms
+C: Tiempo ejecucion kernel GPU: 4183.843899 ms
+Suma de vectores de 3190000000 elementos (1 reps), con 12460938 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 391.125832 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3190000000: 13555.667556 ms
+C: Tiempo ejecucion kernel GPU: 4183.499063 ms
+Suma de vectores de 3200000000 elementos (1 reps), con 12500000 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 245.140841 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3200000000: 13666.681733 ms
+C: Tiempo ejecucion kernel GPU: 4251.933670 ms
+Suma de vectores de 3210000000 elementos (1 reps), con 12539063 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 166.542904 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3210000000: 13690.413688 ms
+C: Tiempo ejecucion kernel GPU: 4219.691023 ms
+Suma de vectores de 3220000000 elementos (1 reps), con 12578125 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 164.469943 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3220000000: 13756.333319 ms
+C: Tiempo ejecucion kernel GPU: 4256.873021 ms
+Suma de vectores de 3230000000 elementos (1 reps), con 12617188 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 380.400929 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3230000000: 13767.470893 ms
+C: Tiempo ejecucion kernel GPU: 4296.433973 ms
+Suma de vectores de 3240000000 elementos (1 reps), con 12656250 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 172.640522 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3240000000: 13764.471660 ms
+C: Tiempo ejecucion kernel GPU: 4286.104929 ms
+Suma de vectores de 3250000000 elementos (1 reps), con 12695313 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 165.794092 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3250000000: 13790.939730 ms
+C: Tiempo ejecucion kernel GPU: 4273.743429 ms
+Suma de vectores de 3260000000 elementos (1 reps), con 12734375 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 178.744691 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3260000000: 13889.241587 ms
+C: Tiempo ejecucion kernel GPU: 4280.954741 ms
+Suma de vectores de 3270000000 elementos (1 reps), con 12773438 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 360.090723 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3270000000: 13940.496203 ms
+C: Tiempo ejecucion kernel GPU: 4315.662321 ms
+Suma de vectores de 3280000000 elementos (1 reps), con 12812500 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 611.840923 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3280000000: 13906.768841 ms
+C: Tiempo ejecucion kernel GPU: 4303.580873 ms
+Suma de vectores de 3290000000 elementos (1 reps), con 12851563 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 612.228078 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3290000000: 13959.369163 ms
+C: Tiempo ejecucion kernel GPU: 4314.346675 ms
+Suma de vectores de 3300000000 elementos (1 reps), con 12890625 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 186.967844 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3300000000: 14038.550939 ms
+C: Tiempo ejecucion kernel GPU: 4351.822692 ms
+Suma de vectores de 3310000000 elementos (1 reps), con 12929688 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 172.551830 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3310000000: 14112.452424 ms
+C: Tiempo ejecucion kernel GPU: 4370.344525 ms
+Suma de vectores de 3320000000 elementos (1 reps), con 12968750 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 163.285098 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3320000000: 14150.626658 ms
+C: Tiempo ejecucion kernel GPU: 4383.102216 ms
+Suma de vectores de 3330000000 elementos (1 reps), con 13007813 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 344.420184 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3330000000: 14205.768448 ms
+C: Tiempo ejecucion kernel GPU: 4413.213813 ms
+Suma de vectores de 3340000000 elementos (1 reps), con 13046875 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 165.030347 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3340000000: 14265.158294 ms
+C: Tiempo ejecucion kernel GPU: 4404.663530 ms
+Suma de vectores de 3350000000 elementos (1 reps), con 13085938 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 166.131991 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3350000000: 14240.510562 ms
+C: Tiempo ejecucion kernel GPU: 4406.369588 ms
+Suma de vectores de 3360000000 elementos (1 reps), con 13125000 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 161.854313 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3360000000: 14332.411771 ms
+C: Tiempo ejecucion kernel GPU: 4305.741167 ms
+Suma de vectores de 3370000000 elementos (1 reps), con 13164063 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 175.553446 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3370000000: 14363.658458 ms
+C: Tiempo ejecucion kernel GPU: 4340.835561 ms
+Suma de vectores de 3380000000 elementos (1 reps), con 13203125 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 1049.390638 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3380000000: 14424.686795 ms
+C: Tiempo ejecucion kernel GPU: 4321.580637 ms
+Suma de vectores de 3390000000 elementos (1 reps), con 13242188 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 439.188364 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3390000000: 14446.418768 ms
+C: Tiempo ejecucion kernel GPU: 4349.124039 ms
+Suma de vectores de 3400000000 elementos (1 reps), con 13281250 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 178.424059 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3400000000: 14452.846407 ms
+C: Tiempo ejecucion kernel GPU: 4325.292202 ms
+Suma de vectores de 3410000000 elementos (1 reps), con 13320313 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 171.849143 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3410000000: 14521.898295 ms
+C: Tiempo ejecucion kernel GPU: 4350.751714 ms
+Suma de vectores de 3420000000 elementos (1 reps), con 13359375 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 389.870103 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3420000000: 14625.575172 ms
+C: Tiempo ejecucion kernel GPU: 4373.985071 ms
+Suma de vectores de 3430000000 elementos (1 reps), con 13398438 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 390.845597 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3430000000: 14675.811566 ms
+C: Tiempo ejecucion kernel GPU: 4389.094307 ms
+Suma de vectores de 3440000000 elementos (1 reps), con 13437500 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 169.554488 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3440000000: 14693.912787 ms
+C: Tiempo ejecucion kernel GPU: 4383.835773 ms
+Suma de vectores de 3450000000 elementos (1 reps), con 13476563 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 378.392832 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3450000000: 14698.642476 ms
+C: Tiempo ejecucion kernel GPU: 4412.743318 ms
+Suma de vectores de 3460000000 elementos (1 reps), con 13515625 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 403.195085 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3460000000: 14713.991264 ms
+C: Tiempo ejecucion kernel GPU: 4375.679428 ms
+Suma de vectores de 3470000000 elementos (1 reps), con 13554688 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 388.595740 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3470000000: 14763.483498 ms
+C: Tiempo ejecucion kernel GPU: 4416.618516 ms
+Suma de vectores de 3480000000 elementos (1 reps), con 13593750 bloques de 256 threads
+A: Tiempo reserva memoria unificada: 399.419423 ms
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14825.484673 ms
+C: Tiempo ejecucion kernel GPU: 4456.005022 ms

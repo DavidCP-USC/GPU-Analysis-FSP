@@ -1,0 +1,160 @@
+Suma de vectores de 3480000000 elementos (1 reps), con 108750000 bloques de 32 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14773.327899 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10207.447981 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 54375000 bloques de 64 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14466.421236 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 6622.942660 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 36250000 bloques de 96 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14982.508080 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9829.690366 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 27187500 bloques de 128 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14615.394130 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10038.033351 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 21750000 bloques de 160 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14651.510390 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10364.213714 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 18125000 bloques de 192 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14594.880212 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10118.988657 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 15535715 bloques de 224 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14606.531112 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10009.700974 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 13593750 bloques de 256 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14488.414868 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9917.298562 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 12083334 bloques de 288 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14566.970113 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9637.911947 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 10875000 bloques de 320 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14594.864892 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9913.019578 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 9886364 bloques de 352 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14577.759476 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9884.579386 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 9062500 bloques de 384 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14592.524604 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10041.159498 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 8365385 bloques de 416 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14569.257975 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9648.560950 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 7767858 bloques de 448 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14589.232539 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9746.656841 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 7250000 bloques de 480 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14946.919203 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9917.019596 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 6796875 bloques de 512 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14987.132209 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9944.101037 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 6397059 bloques de 544 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14938.825217 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9522.818971 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 6041667 bloques de 576 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14584.060545 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9789.816833 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 5723685 bloques de 608 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14566.116294 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10072.887349 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 5437500 bloques de 640 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14599.345163 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10024.538889 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 5178572 bloques de 672 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14606.156656 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 6445.615014 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 4943182 bloques de 704 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14567.087723 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9731.308500 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 4728261 bloques de 736 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 13311.289421 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 6750.649554 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 4531250 bloques de 768 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14621.899122 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10388.275316 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 4350000 bloques de 800 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14553.650414 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9666.850553 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 4182693 bloques de 832 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14588.172623 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10073.638297 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 4027778 bloques de 864 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14597.753121 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10068.536863 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 3883929 bloques de 896 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 13344.990930 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 6282.808712 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 3750000 bloques de 928 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14558.886409 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 9865.713465 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 3625000 bloques de 960 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14615.697288 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10038.351635 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 3508065 bloques de 992 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14559.103739 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10048.968159 ms
+Suma correcta.
+Terminamos
+Suma de vectores de 3480000000 elementos (1 reps), con 3398438 bloques de 1024 threads
+HOST: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 14554.076304 ms
+DEVICE: Tiempo para hacer 1 sumas de vectores de tamaño 3480000000: 10025.834877 ms
+Suma correcta.
+Terminamos
