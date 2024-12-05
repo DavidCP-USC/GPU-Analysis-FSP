@@ -32,16 +32,33 @@
 
 \section{Introducción}
 
-	% TODO
+	En la actualidad, los sistemas de procesamiento paralelo basados en GPUs (Unidades de Procesamiento Gráfico) desempeñan un papel crucial en la computación de alto rendimiento, ya que ofrecen una plataforma eficiente para resolver problemas computacionales complejos. La presente práctica se enmarca dentro del estudio de los \textbf{Fundamentos de Sistemas Paralelos}, y tiene como objetivo principal explorar las capacidades y el desempeño de las GPUs disponibles en el \textbf{Centro de Supercomputación de Galicia} (CESGA), específicamente las unidades NVIDIA A100 y T4.
+
+	A través de esta práctica, se busca no solo comprender las especificaciones técnicas y arquitectónicas de estas GPUs, sino también familiarizarse con su uso en la ejecución de tareas paralelas mediante CUDA (\textit{Compute Unified Device Architecture}). Adicionalmente, se analizará el rendimiento de códigos básicos optimizados para CUDA, lo que permitirá evaluar la capacidad de las GPUs para manejar cargas de trabajo intensivas en computación y memoria.
+
+	Los objetivos específicos incluyen:
+
+	\begin{itemize}
+
+		\item Obtención y análisis de características de las GPUs disponibles en el CESGA, utilizando herramientas como \textit{cudaGetDeviceCount} y \textit{cudaGetDeviceProperties} para detallar aspectos clave como el número de núcleos CUDA, memoria compartida, ancho de banda de memoria y capacidad computacional.
+
+		\item Estudio del rendimiento de un código CUDA simple, evaluando tiempos de ejecución en GPU y CPU para diferentes configuraciones.
+
+		\item Implementación y optimización del producto de matrices en CUDA, considerando tanto matrices cuadradas como rectangulares y ajustando los parámetros para maximizar el rendimiento en GPUs.
+
+	\end{itemize}
+
+	El desarrollo de esta práctica permitirá aplicar conceptos fundamentales de la programación paralela, realizar mediciones detalladas de rendimiento y adquirir experiencia práctica en el uso de sistemas de cómputo avanzado como los del CESGA. Este informe incluye los resultados, gráficos y conclusiones obtenidos en cada uno de los apartados planteados, así como los códigos desarrollados. A través de este análisis, se busca fortalecer la comprensión de las tecnologías actuales de computación paralela y su impacto en la resolución de problemas complejos en diversos dominios científicos y técnicos.
 
 \section{Entorno de ejecución}
 
-	% TODO
+	Para llevar a cabo este estudio, los programas empleados serán ejecutados en el supercomputador de Galicia, el FinisTerrae III.
+
+	El equipo actualmente en servicio, el FinisTerrae III, fue instalado en el año 2021 y puesto en producción en el año 2022. Este supercomputador es un modelo Bull ATOS bullx, distribuido en 13 racks y compuesto por 354 nodos de computación. Dispone de un total de 22,656 núcleos Intel Xeon Ice Lake 8352Y, junto con 128 GPUs Nvidia A100 y 16 Nvidia T4 para aceleración de cómputo. Su capacidad de memoria es de 118 TB, complementada por un sistema de almacenamiento de altas prestaciones Lustre con 5,000 TB. La interconexión de todos los nodos se realiza mediante una red Mellanox Infiniband HDR, diseñada para ofrecer baja latencia y alta velocidad en las comunicaciones, lo cual es fundamental para la eficiencia en la ejecución de aplicaciones paralelas. La capacidad máxima de cómputo teórica de este sistema es de 4 PetaFlops, lo que le permite abordar aplicaciones de alta demanda computacional.
 
 \subsection{Consideraciones}
 
-	% TODO
-	% Por si acaso, que somos gallegos
+	Los experimentos realizados en esta práctica se han visto limitados en su alcance debido a las restricciones impuestas por las capacidades de las colas del supercomputador. En particular, el tiempo máximo permitido por la cola corta (2 horas) condicionando tanto la cantidad de simulaciones como su duración, afectando el análisis y los resultados obtenidos.
 
 \section{Ejercicio 1}
 
