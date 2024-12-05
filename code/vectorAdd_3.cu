@@ -66,10 +66,10 @@ vectorAdd(const basetype *A, const basetype *B, basetype *C, unsigned int numEle
 int
 main(int argc, char *argv[])
 {
-    basetype *h_A=NULL, *h_B=NULL, *h_C=NULL, *h_C2=NULL;
-    basetype *d_A=NULL, *d_B=NULL, *d_C=NULL;
+    basetype *A=NULL, *B=NULL, *C=NULL;
     unsigned int numElements = 0, tpb = 0, nreps=1;
     size_t size = 0;
+
     // Valores para la medida de tiempos
     struct timespec tstart, tend;
     double tint;
@@ -82,113 +82,72 @@ main(int argc, char *argv[])
 
     // Numero de threads por bloque
     tpb = (argc > 2) ? atoi(argv[2]):TPBDEF;
-	// Comprueba si es superior al máximo
-	tpb = (tpb > MAX_TH_PER_BLOCK) ? TPBDEF:tpb;
+    // Comprueba si es superior al máximo
+    tpb = (tpb > MAX_TH_PER_BLOCK) ? TPBDEF:tpb;
 
     // Numero de repeticiones de la suma
     nreps = (argc > 3) ? atoi(argv[3]):NREPDEF;
 
     // Caracteristicas del Grid
-   
     dim3 threadsPerBlock( tpb );
     // blocksPerGrid = ceil(numElements/threadsPerBlock)
     dim3 blocksPerGrid( (numElements + threadsPerBlock.x - 1) / threadsPerBlock.x );
     printf("Suma de vectores de %u elementos (%u reps), con %u bloques de %u threads\n",
       numElements, nreps, blocksPerGrid.x, threadsPerBlock.x);
 
-    // Reserva memoria en el host
-    h_A = (basetype *) malloc(size);
-    h_B = (basetype *) malloc(size);
-    h_C = (basetype *) malloc(size);
-    h_C2 = (basetype *) malloc(size);
+    // Reserva memoria unificada
+    TSET(tstart);
+    checkError(cudaMallocManaged(&A, size));
+    checkError(cudaMallocManaged(&B, size));
+    checkError(cudaMallocManaged(&C, size));
+    TSET(tend);
+    tint = TINT(tstart, tend);
+    printf("A: Tiempo reserva memoria unificada: %lf ms\n", tint);
 
-    // Comprueba errores
-    if (h_A == NULL || h_B == NULL || h_C == NULL)
-    {
-        fprintf(stderr, "Error reservando memoria en el host\n");
-        exit(EXIT_FAILURE);
-    }
-
-    // Inicializa los vectores en el host
+    // Inicializa los vectores
     for (unsigned int i = 0; i < numElements; ++i)
     {
-        h_A[i] = rand()/(basetype)RAND_MAX;
-        h_B[i] = rand()/(basetype)RAND_MAX;
+        A[i] = rand() / (basetype)RAND_MAX;
+        B[i] = rand() / (basetype)RAND_MAX;
     }
 
     /*
     * Hace la suma en el host
     */
-    // Inicio tiempo
     TSET(tstart);
-    // Suma los vectores en el host nreps veces
     for(unsigned int r = 0; r < nreps; ++r)
-      h_vectorAdd( h_A, h_B, h_C, numElements );
-    // Fin tiempo
-    TSET( tend );
+        h_vectorAdd(A, B, C, numElements);
+    TSET(tend);
     tint = TINT(tstart, tend);
-    printf( "HOST: Tiempo para hacer %u sumas de vectores de tamaño %u: %lf ms\n", nreps, numElements, tint );
+    printf("HOST: Tiempo para hacer %u sumas de vectores de tamaño %u: %lf ms\n", nreps, numElements, tint);
 
     /*
     * Hace la suma en el dispositivo
     */
-    // Inicio tiempo
-    TSET( tstart );
-    // Reserva memoria en la memoria global del dispositivo
-    checkError( cudaMalloc((void **) &d_A, size) );
-    checkError( cudaMalloc((void **) &d_B, size) );
-    checkError( cudaMalloc((void **) &d_C, size) );
-
-    // Copia los vectores h_A y h_B del host al dispositivo
-    checkError( cudaMemcpy(d_A, h_A, size, cudaMemcpyHostToDevice) );
-    checkError( cudaMemcpy(d_B, h_B, size, cudaMemcpyHostToDevice) );
-
-    // Lanza el kernel CUDA nreps veces
+    TSET(tstart);
     for(unsigned int r = 0; r < nreps; ++r) {
-      vectorAdd<<<blocksPerGrid, threadsPerBlock>>>(d_A, d_B, d_C, numElements);
-
-      // Comprueba si hubo un error al el lanzamiento del kernel
-      // Notar que el lanzamiento del kernel es asíncrono por lo que
-      // este chequeo podría no detectar errores en la ejecución del mismo
-      checkError( cudaPeekAtLastError() );
-      // Sincroniza los hilos del kernel y chequea errores
-      // Este chequeo detecta posibles errores en la ejecución
-      // Notar que esta sincrinización puede degradar el rendimiento
-      checkError( cudaDeviceSynchronize() );
+        vectorAdd<<<blocksPerGrid, threadsPerBlock>>>(A, B, C, numElements);
+        checkError(cudaDeviceSynchronize());
     }
-
-    // Copia el vector resultado del dispositivo al host
-    checkError( cudaMemcpy(h_C2, d_C, size, cudaMemcpyDeviceToHost) );
-
-    // Fin tiempo
-    TSET( tend );
-    // Calcula tiempo para la suma en el dispositivo
+    TSET(tend);
     tint = TINT(tstart, tend);
-    printf( "DEVICE: Tiempo para hacer %u sumas de vectores de tamaño %u: %lf ms\n", nreps, numElements, tint );
+    printf("C: Tiempo ejecucion kernel GPU: %lf ms\n", tint);
 
     // Verifica que la suma es correcta
     for (unsigned int i = 0; i < numElements; ++i)
     {
-        if (fabs(h_C2[i] - h_C[i]) > 1e-5)
+        if (fabs(C[i] - (A[i] + B[i])) > 1e-5)
         {
             fprintf(stderr, "Verificacion de resultados falla en el elemento %d!\n", i);
             exit(EXIT_FAILURE);
         }
     }
 
-    printf("Suma correcta.\n");
+    // Libera memoria unificada
+    checkError(cudaFree(A));
+    checkError(cudaFree(B));
+    checkError(cudaFree(C));
 
-    // Liberamos la memoria del dispositivo
-    checkError( cudaFree(d_A) );
-    checkError( cudaFree(d_B) );
-    checkError( cudaFree(d_C) );
-
-    // Liberamos la memoria del host
-    free(h_A);
-    free(h_B);
-    free(h_C);
-
-    printf("Terminamos\n");
     return 0;
-}
 
+}

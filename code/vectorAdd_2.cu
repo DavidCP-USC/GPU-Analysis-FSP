@@ -70,6 +70,7 @@ main(int argc, char *argv[])
     basetype *d_A=NULL, *d_B=NULL, *d_C=NULL;
     unsigned int numElements = 0, tpb = 0, nreps=1;
     size_t size = 0;
+
     // Valores para la medida de tiempos
     struct timespec tstart, tend;
     double tint;
@@ -82,14 +83,14 @@ main(int argc, char *argv[])
 
     // Numero de threads por bloque
     tpb = (argc > 2) ? atoi(argv[2]):TPBDEF;
-	// Comprueba si es superior al máximo
-	tpb = (tpb > MAX_TH_PER_BLOCK) ? TPBDEF:tpb;
+    // Comprueba si es superior al máximo
+    tpb = (tpb > MAX_TH_PER_BLOCK) ? TPBDEF:tpb;
 
     // Numero de repeticiones de la suma
     nreps = (argc > 3) ? atoi(argv[3]):NREPDEF;
 
     // Caracteristicas del Grid
-   
+
     dim3 threadsPerBlock( tpb );
     // blocksPerGrid = ceil(numElements/threadsPerBlock)
     dim3 blocksPerGrid( (numElements + threadsPerBlock.x - 1) / threadsPerBlock.x );
@@ -138,12 +139,20 @@ main(int argc, char *argv[])
     checkError( cudaMalloc((void **) &d_A, size) );
     checkError( cudaMalloc((void **) &d_B, size) );
     checkError( cudaMalloc((void **) &d_C, size) );
+    TSET( tend );
+    tint = TINT(tstart, tend);
+    printf( "A: Tiempo reserva memoria GPU: %lf ms\n", tint );
 
     // Copia los vectores h_A y h_B del host al dispositivo
+    TSET( tstart );
     checkError( cudaMemcpy(d_A, h_A, size, cudaMemcpyHostToDevice) );
     checkError( cudaMemcpy(d_B, h_B, size, cudaMemcpyHostToDevice) );
+    TSET( tend );
+    tint = TINT(tstart, tend);
+    printf( "B: Tiempo envio vectores GPU: %lf ms\n", tint );
 
     // Lanza el kernel CUDA nreps veces
+    TSET( tstart );
     for(unsigned int r = 0; r < nreps; ++r) {
       vectorAdd<<<blocksPerGrid, threadsPerBlock>>>(d_A, d_B, d_C, numElements);
 
@@ -156,15 +165,16 @@ main(int argc, char *argv[])
       // Notar que esta sincrinización puede degradar el rendimiento
       checkError( cudaDeviceSynchronize() );
     }
+    TSET( tend );
+    tint = TINT(tstart, tend);
+    printf( "C: Tiempo ejecucion kernel GPU: %lf ms\n", tint );
 
     // Copia el vector resultado del dispositivo al host
+    TSET( tstart );
     checkError( cudaMemcpy(h_C2, d_C, size, cudaMemcpyDeviceToHost) );
-
-    // Fin tiempo
     TSET( tend );
-    // Calcula tiempo para la suma en el dispositivo
     tint = TINT(tstart, tend);
-    printf( "DEVICE: Tiempo para hacer %u sumas de vectores de tamaño %u: %lf ms\n", nreps, numElements, tint );
+    printf( "D: Tiempo envio resultado GPU: %lf ms\n", tint );
 
     // Verifica que la suma es correcta
     for (unsigned int i = 0; i < numElements; ++i)
@@ -176,8 +186,6 @@ main(int argc, char *argv[])
         }
     }
 
-    printf("Suma correcta.\n");
-
     // Liberamos la memoria del dispositivo
     checkError( cudaFree(d_A) );
     checkError( cudaFree(d_B) );
@@ -188,7 +196,7 @@ main(int argc, char *argv[])
     free(h_B);
     free(h_C);
 
-    printf("Terminamos\n");
     return 0;
+
 }
 
