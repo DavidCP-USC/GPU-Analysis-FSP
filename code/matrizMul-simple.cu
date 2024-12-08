@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
     unsigned int rowsA, colsA, rowsB, colsB;
     unsigned int tpb_x, tpb_y;
     struct timespec tstart, tend;
-    double tint;
+    double tintHost, tintDev;
 
     // Dimensiones de las matrices
     rowsA = (argc > 1) ? atoi(argv[1]) : ROWS_DEF;
@@ -128,8 +128,8 @@ int main(int argc, char *argv[])
             h_C[i * colsB + j] = sum;
         }
     TSET(tend);
-    tint = TINT(tstart, tend);
-    printf("HOST: Tiempo multiplicación: %lf ms\n", tint);
+    tintHost = TINT(tstart, tend);
+    printf("HOST: Tiempo multiplicación: %lf ms\n", tintHost);
 
     // GPU: reserva memoria
     checkError(cudaMalloc((void **)&d_A, sizeA));
@@ -145,8 +145,8 @@ int main(int argc, char *argv[])
     matrizMul<<<blocksPerGrid, threadsPerBlock>>>(d_A, d_B, d_C, rowsA, colsA, colsB);
     checkError(cudaDeviceSynchronize());
     TSET(tend);
-    tint = TINT(tstart, tend);
-    printf("DEVICE: Tiempo multiplicación: %lf ms\n", tint);
+    tintDev = TINT(tstart, tend);
+    printf("DEVICE: Tiempo multiplicación: %lf ms\n", tintDev);
 
     // Copia el resultado de vuelta
     checkError(cudaMemcpy(h_C2, d_C, sizeC, cudaMemcpyDeviceToHost));
@@ -163,7 +163,18 @@ int main(int argc, char *argv[])
 
     printf("Multiplicación correcta.\n");
 
+    // Imprimimos los datos obtenidos en el archivo correspondiente
+    FILE *dataFile = fopen("P3_3.csv", "a");
+    if (dataFile == NULL){
+        fprintf(stderr, "Error al abrir el archivo de datos\n");
+        exit(EXIT_FAILURE);
+    }
+    fprintf(dataFile, "%lf;%lf;%d;%d;%d;%d;%d;%d\n", tintHost, tintDev, rowsA, colsA, rowsB, colsB, tpb_x, tpb_y);
+
+
     // Libera memoria
+    fclose(dataFile);
+    dataFile = NULL;
     free(h_A);
     free(h_B);
     free(h_C);
